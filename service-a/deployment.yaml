@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payara-sample-deployment
+  labels:
+    app: payara-sample
+spec:
+  replicas: 1
+  minReadySeconds: 5
+  selector:
+    matchLabels:
+      app: payara-sample
+  template:
+    metadata:
+      labels:
+        app: payara-sample
+    spec:
+      containers:
+        - name: payara-sample
+          image: samplemicroprofile:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: user
+              valueFrom:
+                secretKeyRef:
+                  name: database-config
+                  key: user
+            - name: password
+              valueFrom:
+                secretKeyRef:
+                  name: database-config
+                  key: password
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              memory: "1000Mi"
+              cpu: "500m"
+
+
+

@@ -1,0 +1,44 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="samplemicroprofile-service-a:war exploded">
+    <output-path>$PROJECT_DIR$/service-a/target/samplemicroprofile</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>samplemicroprofile-service-a</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="samplemicroprofile-service-a" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: io.vertx:vertx-auth-jwt:3.9.5" />
+          <element id="library" level="project" name="Maven: io.vertx:vertx-auth-common:3.9.5" />
+          <element id="library" level="project" name="Maven: io.vertx:vertx-jwt:3.9.5" />
+          <element id="library" level="project" name="Maven: io.vertx:vertx-core:3.9.5" />
+          <element id="library" level="project" name="Maven: io.netty:netty-common:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-buffer:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-transport:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-handler:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-codec:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-handler-proxy:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-codec-socks:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-codec-http:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-codec-http2:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-resolver:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-resolver-dns:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-codec-dns:4.1.49.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.3" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/service-a/target/samplemicroprofile/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="samplemicroprofile-service-a/web/Web" />
+    </root>
+  </artifact>
+</component>

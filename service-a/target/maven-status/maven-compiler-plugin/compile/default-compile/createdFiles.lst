@@ -1,0 +1,14 @@
+com/example/samplemicroprofile/client/ClientController.class
+com/example/samplemicroprofile/health/ServiceLiveHealthCheck.class
+com/example/samplemicroprofile/openapi/Destination.class
+com/example/samplemicroprofile/secure/MPJWTToken.class
+com/example/samplemicroprofile/metric/MetricController.class
+com/example/samplemicroprofile/config/ConfigTestController.class
+com/example/samplemicroprofile/secure/TestSecureController.class
+com/example/samplemicroprofile/health/ServiceReadyHealthCheck.class
+com/example/samplemicroprofile/SamplemicroprofileRestApplication.class
+com/example/samplemicroprofile/openapi/BookingController.class
+com/example/samplemicroprofile/HelloController.class
+com/example/samplemicroprofile/resilient/ResilienceController.class
+com/example/samplemicroprofile/openapi/Booking.class
+com/example/samplemicroprofile/client/Service.class
