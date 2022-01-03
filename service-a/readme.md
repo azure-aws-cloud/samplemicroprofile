@@ -54,6 +54,8 @@ Specification [here](https://microprofile.io/project/eclipse/microprofile-health
 The class **ServiceHealthCheck** contains an example of a custom check which can be integrated to health status checks
 of the instance. The index page contains a link to the status data.
 
+
+
 ### Metrics
 
 The Metrics exports _Telemetric_ data in a uniform way of system and custom resources.

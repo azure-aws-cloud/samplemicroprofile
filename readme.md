@@ -56,3 +56,34 @@ http://localhost:8080/samplemicroprofile/data/hello
 Output : Hello World for rhushi (this value rhushi is pushed by secret into container)
 
 ```
+
+## Readiness and Liveness probe / Health checks
+
+#check startup probes
+
+http://localhost:8080/health/started
+
+#check liveness probe
+http://localhost:8080/health/live
+
+![img_1.png](img_1.png)
+
+#check readiness probe
+http://localhost:8080/health/ready
+
+![img.png](img.png)
+
+#All health checks
+http://localhost:8080/health/
+
+/health/started – To check startup probes.
+
+/health/live – To check liveness probes.
+
+/health/ready – To check readiness probes.
+
+/health – Accumulating all health check procedures in the application.
+
+ServiceLiveHealthCheck implements Readiness and return live=true in call() func
+
+ServiceReadyHealthCheck implements Readiness and return ready=true in call() func
