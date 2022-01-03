@@ -6,6 +6,10 @@ cd service-a
 ```
 cd service-a
 
+minikube start --driver=docker
+minikube -p minikube docker-driver
+eval$(minikube -p docker-driver)
+
 docker build -t samplemicroprofile:latest .
 
 kubectl create secret generic database-config --from-literal=database-server=10.0.1.15 --from-literal=user=rhushi --from-literal=password=123
