@@ -87,3 +87,6 @@ http://localhost:8080/health/
 ServiceLiveHealthCheck implements Readiness and return live=true in call() func
 
 ServiceReadyHealthCheck implements Readiness and return ready=true in call() func
+
+## Autoscale
+kubectl autoscale deployment <deployment-name> --cpu-percent=50 --min=1 --max=10
