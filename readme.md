@@ -7,8 +7,8 @@ cd service-a
 cd service-a
 
 minikube start --driver=docker
-minikube -p minikube docker-driver
-eval$(minikube -p docker-driver)
+minikube -p minikube docker-env
+eval$(minikube -p docker-env)
 
 docker build -t samplemicroprofile:latest .
 
