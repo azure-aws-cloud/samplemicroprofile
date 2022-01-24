@@ -7,8 +7,8 @@ cd service-a
 cd service-a
 
 minikube start --driver=docker
-minikube -p minikube docker-driver
-eval$(minikube -p docker-driver)
+minikube -p minikube docker-env
+eval$(minikube -p docker-env)
 
 docker build -t samplemicroprofile:latest .
 
@@ -87,3 +87,6 @@ http://localhost:8080/health/
 ServiceLiveHealthCheck implements Readiness and return live=true in call() func
 
 ServiceReadyHealthCheck implements Readiness and return ready=true in call() func
+
+## Autoscale
+kubectl autoscale deployment deployment.apps/payara-sample-deployment --cpu-percent=50 --min=1 --max=10
