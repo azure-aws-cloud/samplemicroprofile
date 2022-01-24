@@ -24,6 +24,36 @@ kubectl port-forward deployment.apps/payara-sample-deployment 8080:8080 4848:484
 
 ```
 
+## Docker run
+```
+
+docker create network demo-net
+
+docker run -d --rm -p 8080:8080 --name service --net demo-net samplemicroprofile:latest
+
+service in the above argument is configured to run at port 8080 in prometheus yml file
+
+the docker network is created so that the containers can communicate with each other  
+
+cd src/main/prometheus/docker
+
+docker build -t prometheus:latest .
+
+docker run -d --rm -p 9090:9090 --name prom --net demo-net prometheus:latest
+
+
+docker run -d --rm -p 8080:8080 --name payara --net demo-net samplemicroprofile:latest
+
+curl http://localhost:8080/samplemicroprofile/data/hello/hello-get
+
+hit the url http://localhost:8080/metrics
+
+hit the url http://localhost:9090
+
+
+
+```
+![img_2.png](img_2.png)
 ## Edit secrets
 
 ```
